@@ -1,0 +1,149 @@
+https://huggingface.co/spaces/Luismbpr/foodimgclass_10_01
+
+Start by cloning this repo by using:
+
+
+HTTPS
+# When prompted for a password, use an access token with write permissions.
+# Generate one from your settings: https://huggingface.co/settings/tokens
+git clone https://huggingface.co/spaces/Luismbpr/foodimgclass_10_01
+
+
+SSH
+# Make sure your SSH key is properly setup in your user settings.
+# https://huggingface.co/settings/keys
+git clone git@hf.co:spaces/Luismbpr/foodimgclass_10_01
+
+
+
+
+Then commit and push:
+git add app.py
+						
+git commit -m "Add application file"
+						
+git push
+
+Hint Alternatively, you can create the app.py file directly in your browser.
+
+Finally, your Space should be running on this page after a few moments!
+Dependencies
+You can add a requirements.txt file at the root of the repository to specify Python dependencies
+If needed, you can also add a packages.txt file at the root of the repository to specify Debian dependencies.
+The gradio package is pre-installed and its version is set in the sdk_version field in the README.md file.
+Personalize your Space
+Make your Space stand out by customizing its emoji, colors, and description by editing metadata in its README.md file.
+Documentation
+Read the full documentation for gradio Spaces here.
+
+
+
+
+
+
+cd ~
+
+source start_miniforge.sh
+
+cd '/Users/luis/Documents/Proyects_To_Export/0151_FoodImageClassification_10Labels/venv_0151_Deployment_311_001'
+
+conda activate venv_0151_Deployment_311_001
+
+git clone https://huggingface.co/spaces/Luismbpr/foodimgclass_10_01
+
+cp -r '/Users/luis/Documents/Proyects_To_Export/0151_FoodImageClassification_10Labels/venv_0151_Deployment_311_001/' '/Users/luis/Documents/Proyects_To_Export/0151_FoodImageClassification_10Labels/venv_0151_Deployment_311_001/foodimgclass_10_01'
+
+
+cd '/Users/luis/Documents/Proyects_To_Export/0151_FoodImageClassification_10Labels/venv_0151_Deployment_311_001/foodimgclass_10_01'
+
+git remote -v
+#Result
+#origin	https://huggingface.co/spaces/Luismbpr/foodimgclass_10_01 (fetch)
+#origin	https://huggingface.co/spaces/Luismbpr/foodimgclass_10_01 (push)
+
+git lfs install
+#Result
+#Updated Git hooks.
+#Git LFS initialized.
+
+Track the big files (Over 10 mb)
+git lfs track 001_001_pretrained_effnetb2_feature_extractor_10_labels_35_percent_20_epochs.pth
+
+(venv_0151_Deployment_311_001) % git lfs track "001_001_pretrained_effnetb2_feature_extractor_10_labels_35_percent_20_epochs.pth"
+#Result
+#Tracking "001_001_pretrained_effnetb2_feature_extractor_10_labels_35_percent_20_epochs.pth"
+
+git lfs track "*.pth"
+#Result
+#"*.pth" already supported
+
+#Make sure the .gitattributes is tracked
+git add .gitattributes
+
+#See what will be uploaded
+git status
+
+git add *
+#Result
+#The following paths are ignored by one of your .gitignore files:
+#hugging_face_info.txt
+#venv_0151_Deployment_311_001.txt
+#zip_0151_001.sh
+#hint: Use -f if you really want to add them.
+#hint: Turn this message off by running
+#hint: "git config advice.addIgnoredFile false"
+
+git status
+#Result
+#All files that will be added
+#All files that will be ignored thanks to .gitignore
+
+git add *
+git commit -m "first commit uploading all files"
+git push
+#Username for 'https://huggingface.co': Luismbpr
+#Password for 'https://Luismbpr@huggingface.co': 
+#Uploading LFS objects: 100% (1/1), 31 MB | 4.2 MB/s, done.                           
+#Enumerating objects: 15, done.
+#Counting objects: 100% (15/15), done.
+#Delta compression using up to 10 threads
+#Compressing objects: 100% (11/11), done.
+#Writing objects: 100% (13/13), 211.87 KiB | 26.48 MiB/s, done.
+#Total 13 (delta 1), reused 0 (delta 0), pack-reused 0
+#To https://huggingface.co/spaces/Luismbpr/foodimgclass_10_01
+#   6950e4f..6f6ffa4  main -> main
+
+
+
+Generate Access Token
+https://huggingface.co/blog/password-git-deprecation
+https://huggingface.co/docs/hub/security-tokens#user-access-tokens
+
+
+
+% git add README.md
+% git commit -m "adding README.md"
+[main 63aea43] adding README.md
+ 1 file changed, 87 insertions(+), 13 deletions(-)
+% git push
+#Enumerating objects: 5, done.
+#Counting objects: 100% (5/5), done.
+#Delta compression using up to 10 threads
+#Compressing objects: 100% (3/3), done.
+#Writing objects: 100% (3/3), 1.32 KiB | 1.32 MiB/s, done.
+#Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+#remote: -------------------------------------------------------------------------
+#remote: Your push was accepted, but with warnings: 
+#remote: - Warning: empty or missing yaml metadata in repo card
+#remote: help: https://huggingface.co/docs/hub/spaces-config-reference
+#remote: -------------------------------------------------------------------------
+#remote: -------------------------------------------------------------------------
+#remote: Please find the documentation at:
+#remote: https://huggingface.co/docs/hub/model-cards#model-card-metadata
+#remote: 
+#remote: -------------------------------------------------------------------------
+#To https://huggingface.co/spaces/Luismbpr/foodimgclass_10_01
+#   6f6ffa4..63aea43  main -> main
+
+git status
+#all well
