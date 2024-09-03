@@ -15,7 +15,9 @@
 * [License](#license)
 
 ## About
-Multilabel Image Classification for 10 labels trained on 35 percent of total data
+Multilabel Image Classification for 10 labels trained on 35 percent of total data.
+
+For more information please see the project report named "main_report.pdf".
 
 <br>
 
